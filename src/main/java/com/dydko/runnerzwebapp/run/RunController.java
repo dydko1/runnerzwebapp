@@ -1,0 +1,58 @@
+package com.dydko.runnerzwebapp.run;
+
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
+
+import java.util.List;
+import java.util.Optional;
+
+@RestController
+@RequestMapping("/api/runs")
+public class RunController {
+
+    private final RunRepository repository;
+
+    public RunController(RunRepository repository) {
+        this.repository = repository;
+    }
+
+    @RequestMapping("")
+    List<Run> finAll() {
+        return repository
+                .findAll();
+    }
+
+    @RequestMapping("/{id}")
+    Run findById(@PathVariable Integer id) {
+        Optional<Run> run = repository.findById(id);
+        if (run.isEmpty()) {
+            throw new RunNotFoundException();
+        }
+        return run
+                .get();
+    }
+
+    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping("")
+    void create(@Valid @RequestBody Run run) {
+        repository
+                .create(run);
+    }
+
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @PutMapping("/{id}")
+    void update(@Valid @RequestBody Run run, @PathVariable Integer id) {
+        repository
+                .update(run, id);
+    }
+
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @DeleteMapping("/{id}")
+    void delete(@PathVariable Integer id) {
+        repository
+                .delete(id);
+    }
+
+}
