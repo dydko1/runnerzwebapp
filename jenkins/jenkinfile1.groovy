@@ -1,7 +1,7 @@
 pipeline {
 agent any  
 parameters {  
-    string(name: 'packageType', defaultValue: 'default Miro1233')
+    string(name: 'packageType', defaultValue: 'default tu był mirrorororro')
 }  
 stages {  
     stage('Build') {  
