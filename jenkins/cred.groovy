@@ -7,7 +7,6 @@ pipeline {
         stage('Call API') {
             steps {
                 script {
-                    def apiToken = params.API_TOKEN
                     echo "curl -H 'Authorization: Bearer ${apiToken}' https://api.example.com/data"
                 }
             }
