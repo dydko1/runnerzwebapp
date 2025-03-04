@@ -7,7 +7,7 @@ pipeline {
         stage('Call API') {
             steps {
                 script {
-                    echo "curl -H 'Authorization: Bearer ${apiToken}' https://api.example.com/data"
+                    echo "curl -H 'Authorization: Bearer ${API_TOKEN}' https://api.example.com/data"
                 }
             }
         }
