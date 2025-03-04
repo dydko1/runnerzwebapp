@@ -1,12 +1,20 @@
 pipeline {
     agent any
-    tools {
-        maven 'apache-maven-3.9.9'
+    parameters {
+        string(name: 'packageType', defaultValue: 'default', description: 'Type of package to build')
     }
     stages {
-        stage('Example') {
+        stage('Build') {
             steps {
-                sh 'mvn --version'
+                sh 'echo "Building package type: ${packageType}" abc'
+            }
+        }
+    }
+
+    stages {
+        stage('Build2') {
+            steps {
+                sh 'echo "Building package type: ${packageType}" def'
             }
         }
     }
