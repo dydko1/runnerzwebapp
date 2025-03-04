@@ -8,10 +8,10 @@ pipeline {
             steps {
                 script {
                     if (INCLUDE_DEBUG) {
-                        echo 'Debug information will be included in the deployment.'
+                        echo 'Debug information will be included in the deployment. false'
                         // Add steps to include debug information
                     } else {
-                        echo 'Debug information will NOT be included in the deployment.'
+                        echo 'Debug information will NOT be included in the deployment. true'
                         // Proceed without debug information
                     }
                 }
