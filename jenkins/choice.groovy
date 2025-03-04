@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage('Build'){
             steps{
-                echo "${params.VERSION}"
+                echo "${VERSION}"
             }
         }
     }
