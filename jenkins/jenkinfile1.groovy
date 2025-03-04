@@ -9,9 +9,6 @@ pipeline {
                 sh 'echo "Building package type: ${packageType}" abc'
             }
         }
-    }
-
-    stages {
         stage('Build2') {
             steps {
                 sh 'echo "Building package type: ${packageType}" def'
