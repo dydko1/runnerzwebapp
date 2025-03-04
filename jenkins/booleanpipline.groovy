@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        booleanParam(name: 'INCLUDE_DEBUG', defaultValue: false, description: 'Include debug information in the deployment')
+        booleanParam(name: 'INCLUDE_DEBUG', defaultValue: true, description: 'Include debug information in the deployment')
     }
     stages {
         stage('Build') {
