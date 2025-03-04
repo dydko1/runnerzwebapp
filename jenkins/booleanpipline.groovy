@@ -14,7 +14,7 @@ pipeline {
                         echo 'Debug information will NOT be included in the deployment. true 22'
                         // Proceed without debug information
                     }
-                    echo 'Miro: ${params.INCLUDE_DEBUG} '
+                    echo "Miro: ${params.INCLUDE_DEBUG} "
                 }
             }
         }
