@@ -1,12 +1,12 @@
 pipeline {
     agent any
-    parameters {
-        string(name: 'packageType', defaultValue: 'tu był super Miro', description: 'Type of package to build')
+    tools {
+        maven 'apache-maven-3.9.9'
     }
     stages {
-        stage('Build') {
+        stage('Example') {
             steps {
-                sh 'echo "Building package type: ${packageType}"'
+                sh 'mvn --version'
             }
         }
     }
