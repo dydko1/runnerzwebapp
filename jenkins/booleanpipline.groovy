@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    if (param.INCLUDE_DEBUG) {
+                    if (params.INCLUDE_DEBUG) {
                         echo 'Debug information will be included in the deployment. false 11'
                         // Add steps to include debug information
                     } else {
