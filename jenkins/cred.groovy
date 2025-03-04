@@ -8,7 +8,7 @@ pipeline {
             steps {
                 script {
                     def apiToken = params.API_TOKEN
-                    sh "curl -H 'Authorization: Bearer ${apiToken}' https://api.example.com/data"
+                    echo "curl -H 'Authorization: Bearer ${apiToken}' https://api.example.com/data"
                 }
             }
         }
