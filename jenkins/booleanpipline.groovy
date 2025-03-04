@@ -1,13 +1,13 @@
 pipeline {
     agent any
     parameters {
-        booleanParam(name: 'INCLUDE_DEBUG', defaultValue: true, description: 'Include debug information in the deployment')
+        booleanParam(name: 'INCLUDE_DEBUG', defaultValue: false, description: 'Include debug information in the deployment')
     }
     stages {
         stage('Build') {
             steps {
                 script {
-                    if (params.INCLUDE_DEBUG) {
+                    if (INCLUDE_DEBUG) {
                         echo 'Debug information will be included in the deployment. false 11'
                         // Add steps to include debug information
                     } else {
