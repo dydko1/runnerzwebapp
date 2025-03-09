@@ -3,13 +3,14 @@ package com.dydko.runnerzwebapp;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
-import java.util.List;
-
 @SpringBootApplication
 public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+
+        var ctx = SpringApplication.run(Application.class, args);
+        MyFirstService myFirstService = ctx.getBean(MyFirstService.class);
+        System.out.println(myFirstService.tellStory());
+        System.out.println("--------------------------------");
     }
 }
