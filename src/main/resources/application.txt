@@ -3,4 +3,3 @@ spring.application.name=runnerzwebapp
 #
 #logging.level.org.springframework.jdbc=INFO
 spring.output.ansi.enabled=ALWAYS
-my.custom.property=My custom property324324324
