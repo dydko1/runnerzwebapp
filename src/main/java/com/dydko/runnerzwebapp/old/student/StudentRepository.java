@@ -1,4 +1,4 @@
-package com.dydko.runnerzwebapp.student;
+package com.dydko.runnerzwebapp.old.student;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -8,5 +8,5 @@ public interface StudentRepository extends JpaRepository<Student, Integer> {
 
     List<Student> findAllByFirstName(String firstName);
 
-    List<Student> xxfindAllByLastName(String xxx);
+    List<Student> findAllByLastName(String lastName);
 }

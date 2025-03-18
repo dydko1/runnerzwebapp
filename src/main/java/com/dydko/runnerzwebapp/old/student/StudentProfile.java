@@ -1,4 +1,4 @@
-package com.dydko.runnerzwebapp.student;
+package com.dydko.runnerzwebapp.old.student;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

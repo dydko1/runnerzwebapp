@@ -1,4 +1,4 @@
-package com.dydko.runnerzwebapp.school;
+package com.dydko.runnerzwebapp.old.school;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;

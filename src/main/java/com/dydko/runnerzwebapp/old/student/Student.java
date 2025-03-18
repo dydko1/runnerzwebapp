@@ -1,6 +1,6 @@
-package com.dydko.runnerzwebapp.student;
+package com.dydko.runnerzwebapp.old.student;
 
-import com.dydko.runnerzwebapp.school.School;
+import com.dydko.runnerzwebapp.old.school.School;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.*;

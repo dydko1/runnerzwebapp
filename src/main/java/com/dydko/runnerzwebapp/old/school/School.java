@@ -1,6 +1,6 @@
-package com.dydko.runnerzwebapp.school;
+package com.dydko.runnerzwebapp.old.school;
 
-import com.dydko.runnerzwebapp.student.Student;
+import com.dydko.runnerzwebapp.old.student.Student;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
