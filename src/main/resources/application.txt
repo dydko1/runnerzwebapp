@@ -1,5 +1,0 @@
-spring.application.name=runnerzwebapp
-#spring.datasource.name=runnerz
-#
-#logging.level.org.springframework.jdbc=INFO
-spring.output.ansi.enabled=ALWAYS
