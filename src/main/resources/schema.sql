@@ -1,17 +1,19 @@
-DROP TABLE IF EXISTS "books";
-DROP TABLE IF EXISTS "authors";
-
-CREATE TABLE authors (
-    id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    name TEXT,
-    age INTEGER
+CREATE TABLE POST (
+    ID BIGINT AUTO_INCREMENT  PRIMARY KEY,
+    title VARCHAR(400) NOT NULL,
+    content VARCHAR(400) NULL,
+    created timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE books (
-    isbn TEXT NOT NULL,
-    title TEXT,
-    author_id BIGINT,
-    CONSTRAINT books_pkey PRIMARY KEY (isbn),
-    CONSTRAINT fk_author FOREIGN KEY (author_id)
-    REFERENCES authors(id) ON DELETE CASCADE
-);
+CREATE TABLE COMMENT (
+    id BIGINT AUTO_INCREMENT  PRIMARY KEY,
+    post_id BIGINT NOT NULL,
+    content VARCHAR(400) NULL,
+    created timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+ );
+
+ ALTER TABLE COMMENT
+    ADD CONSTRAINT comment_post_id
+    FOREIGN KEY (post_id) REFERENCES POST(id);
+
+
