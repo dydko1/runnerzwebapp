@@ -19,16 +19,5 @@ public class OneToOneUniDirectionalApplication {
         ConfigurableApplicationContext configurableApplicationContext =
                 SpringApplication.run(OneToOneUniDirectionalApplication.class, args);
 
-        AddressRepository addressRepository =
-                configurableApplicationContext.getBean(AddressRepository.class);
-        UserRepository userRepository =
-                configurableApplicationContext.getBean(UserRepository.class);
-
-        Address address = new Address("Złota 12");
-        addressRepository.save(address);
-        User user = new User("Miro", address);
-        userRepository.save(user);
-
-
     }
 }
