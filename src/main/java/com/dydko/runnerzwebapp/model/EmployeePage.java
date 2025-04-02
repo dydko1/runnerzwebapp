@@ -6,11 +6,10 @@ import org.springframework.data.domain.Sort;
 
 @Getter
 @Setter
-public class StudentPage {
+public class EmployeePage {
 
     private int pageNumber = 0;
     private int pageSize = 10;
     private Sort.Direction sortDirection = Sort.Direction.ASC;
     private String sortBy = "lastName";
 }
-
