@@ -7,9 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @Log
-public class JpaPagingAndSortingApplication {
+public class HelloWebApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(JpaPagingAndSortingApplication.class, args);
+        SpringApplication.run(HelloWebApplication.class, args);
     }
 }
